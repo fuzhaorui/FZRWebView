@@ -15,6 +15,10 @@
 		288B53D61C16C2B900CD1F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288B53D41C16C2B900CD1F3E /* LaunchScreen.storyboard */; };
 		288B53E11C16C2BA00CD1F3E /* FZRWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 288B53E01C16C2BA00CD1F3E /* FZRWebViewTests.m */; };
 		288B53EC1C16C2BA00CD1F3E /* FZRWebViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 288B53EB1C16C2BA00CD1F3E /* FZRWebViewUITests.m */; };
+		288B53FC1C16C33800CD1F3E /* FZRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288B53FB1C16C33800CD1F3E /* FZRWebViewController.m */; };
+		288B53FF1C16C34600CD1F3E /* fzr_webview_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 288B53FD1C16C34600CD1F3E /* fzr_webview_back.png */; };
+		288B54001C16C34600CD1F3E /* fzr_webview_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 288B53FE1C16C34600CD1F3E /* fzr_webview_menu.png */; };
+		288B54021C16C42500CD1F3E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288B54011C16C42500CD1F3E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,11 @@
 		288B53E71C16C2BA00CD1F3E /* FZRWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FZRWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		288B53EB1C16C2BA00CD1F3E /* FZRWebViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZRWebViewUITests.m; sourceTree = "<group>"; };
 		288B53ED1C16C2BA00CD1F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		288B53FA1C16C33800CD1F3E /* FZRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZRWebViewController.h; sourceTree = "<group>"; };
+		288B53FB1C16C33800CD1F3E /* FZRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZRWebViewController.m; sourceTree = "<group>"; };
+		288B53FD1C16C34600CD1F3E /* fzr_webview_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fzr_webview_back.png; sourceTree = "<group>"; };
+		288B53FE1C16C34600CD1F3E /* fzr_webview_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fzr_webview_menu.png; sourceTree = "<group>"; };
+		288B54011C16C42500CD1F3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288B54021C16C42500CD1F3E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,7 @@
 		288B53BA1C16C2B900CD1F3E = {
 			isa = PBXGroup;
 			children = (
+				288B54011C16C42500CD1F3E /* WebKit.framework */,
 				288B53C51C16C2B900CD1F3E /* FZRWebView */,
 				288B53DF1C16C2BA00CD1F3E /* FZRWebViewTests */,
 				288B53EA1C16C2BA00CD1F3E /* FZRWebViewUITests */,
@@ -101,6 +112,7 @@
 		288B53C51C16C2B900CD1F3E /* FZRWebView */ = {
 			isa = PBXGroup;
 			children = (
+				288B53F91C16C30500CD1F3E /* FZRWebView */,
 				288B53C91C16C2B900CD1F3E /* AppDelegate.h */,
 				288B53CA1C16C2B900CD1F3E /* AppDelegate.m */,
 				288B53CC1C16C2B900CD1F3E /* ViewController.h */,
@@ -138,6 +150,17 @@
 				288B53ED1C16C2BA00CD1F3E /* Info.plist */,
 			);
 			path = FZRWebViewUITests;
+			sourceTree = "<group>";
+		};
+		288B53F91C16C30500CD1F3E /* FZRWebView */ = {
+			isa = PBXGroup;
+			children = (
+				288B53FD1C16C34600CD1F3E /* fzr_webview_back.png */,
+				288B53FE1C16C34600CD1F3E /* fzr_webview_menu.png */,
+				288B53FA1C16C33800CD1F3E /* FZRWebViewController.h */,
+				288B53FB1C16C33800CD1F3E /* FZRWebViewController.m */,
+			);
+			path = FZRWebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +266,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288B53FF1C16C34600CD1F3E /* fzr_webview_back.png in Resources */,
 				288B53D61C16C2B900CD1F3E /* LaunchScreen.storyboard in Resources */,
 				288B53D31C16C2B900CD1F3E /* Assets.xcassets in Resources */,
 				288B53D11C16C2B900CD1F3E /* Main.storyboard in Resources */,
+				288B54001C16C34600CD1F3E /* fzr_webview_menu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288B53FC1C16C33800CD1F3E /* FZRWebViewController.m in Sources */,
 				288B53CE1C16C2B900CD1F3E /* ViewController.m in Sources */,
 				288B53CB1C16C2B900CD1F3E /* AppDelegate.m in Sources */,
 				288B53C81C16C2B900CD1F3E /* main.m in Sources */,
@@ -363,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
